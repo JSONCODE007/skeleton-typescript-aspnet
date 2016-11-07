@@ -1,0 +1,46 @@
+@import '../framework/colors';
+
+.fa-toggle-on {
+    color: $dark-green;
+    transition: color .5s;
+
+    &.fa-flip-horizontal {
+        color: $pale-green;
+    }
+}
+
+.checkbox-grouping {
+    background-color: $white;
+    border: 1px dotted $dark-green;
+    border-radius: 5px;
+    margin: 5px 10px 5px 5px;
+
+    > .checkbox-row {
+        display: flex;
+
+        &:first-child {
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.checkbox-row {
+
+    > h5 {
+        margin: 0;
+        padding-left: 5px;
+        width: 75%;
+    }
+
+    > i {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    > label {
+        cursor: pointer;
+        padding-left: 5px;
+        width: 75%;
+    }
+}

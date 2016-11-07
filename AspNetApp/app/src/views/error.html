@@ -1,0 +1,8 @@
+<template>
+    <div if.bind="!userHasRole">
+        You do not have access to this project. If you feel you are recieving this in error, please contact your web admin.
+    </div>
+    <div if.bind="userHasRole">
+        An error has occurred.
+    </div>
+</template>

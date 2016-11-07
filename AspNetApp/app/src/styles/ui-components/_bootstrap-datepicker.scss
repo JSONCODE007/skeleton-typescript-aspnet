@@ -1,0 +1,40 @@
+@import '../framework/colors';
+
+$border-color: rgba(0, 0, 0, .15);
+$shadow-color: rgba(0, 0, 0, .175);
+$icon-gray: #555;
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px $shadow-color;
+    float: left;
+    font-size: 14px;
+    list-style: none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    z-index: 1000;
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .table-condensed > thead > tr > th,
+    .table-condensed > tbody > tr > th,
+    .table-condensed > tfoot > tr > th,
+    .table-condensed > thead > tr > td,
+    .table-condensed > tbody > tr > td,
+    .table-condensed > tfoot > tr > td {
+        padding: 5px;
+    }
+
+    th {
+        text-align: left;
+    }
+}

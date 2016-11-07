@@ -1,0 +1,15 @@
+# Asp.Net WebApi ignore
+.vs/
+bin/
+obj/
+*.nuget.props
+*.lock.json
+*.user
+
+# Aurelia ignore
+.vscode/
+jspm_packages/
+node_modules/
+dist/
+typings/
+export/

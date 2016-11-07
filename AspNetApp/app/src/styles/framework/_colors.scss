@@ -1,0 +1,31 @@
+$black: #000;
+$gray: #666;
+$white: #fff;
+
+$colors: (
+    white: (base: $white),
+    black: (base: $black),
+    gray: (
+        base: $gray,
+        light: tint($gray, 25%),
+        lighter: tint($gray, 50%),
+        lightest: tint($gray, 75%),
+        dark: shade($gray, 25%),
+        darker: shade($gray, 50%),
+        darkest: shade($gray, 75%)
+    )
+)
+
+
+
+// $black: #000;
+// $blue: #1e90ff;
+// $green: #7c9c8f;
+// $dark-gray: #333;
+// $dark-green: #527e71;
+// $gray: #f9f9f9;
+// $light-gray: #adadad;
+// $light-red: #ffbfbf;
+// $light-yellow: #ffffe0;
+// $pale-green: #e8eeed;
+// $white: #fff;
