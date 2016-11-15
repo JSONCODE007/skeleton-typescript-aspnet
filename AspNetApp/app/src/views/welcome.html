@@ -1,4 +1,7 @@
 <template>
+  <require from="../custom-attributes/datepicker"></require>
+  <require from="../value-converters/date"></require>
+
   <section class="au-animate">
     <h2>${heading}</h2>
     <form role="form" submit.delegate="submit()">
@@ -17,4 +20,11 @@
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </section>
+
+  <div class="input-group date" datepicker.two-way="date">
+    <input type="date" class="form-control" value.bind="date | date">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div>
+  </div>
 </template>

@@ -1,4 +1,4 @@
-// import {computedFrom} from 'aurelia-framework';
+import {bindable} from 'aurelia-framework';
 
 export class Welcome {
   public heading = 'Welcome to the Aurelia Navigation App!';
@@ -6,6 +6,7 @@ export class Welcome {
   public lastName = 'Doe';
   private previousValue = this.fullName;
 
+  @bindable public date = new Date(2015, 1, 15);
   // Getters can't be directly observed, so they must be dirty checked.
   // However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
   // To optimize by declaring the properties that this getter is computed from, uncomment the line below

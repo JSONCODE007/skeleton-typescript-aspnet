@@ -9,7 +9,7 @@ export class DatepickerCustomAttribute {
     constructor(private element: Element) {
     }
 
-    public attached() {
+    public bind() {
         let datepickerOptions: DatepickerOptions = { autoclose: true, format: 'yyyy-mm-dd' };
 
         $(this.element)
