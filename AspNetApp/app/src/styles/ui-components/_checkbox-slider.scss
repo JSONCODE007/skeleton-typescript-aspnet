@@ -1,17 +1,17 @@
 @import '../framework/colors';
 
 .fa-toggle-on {
-    color: $dark-green;
+    color: get-color('dark-green');
     transition: color .5s;
 
     &.fa-flip-horizontal {
-        color: $pale-green;
+        color: get-color('lightest-green');
     }
 }
 
 .checkbox-grouping {
-    background-color: $white;
-    border: 1px dotted $dark-green;
+    background-color: get-color('white');
+    border: 1px dotted get-color('dark-green');
     border-radius: 5px;
     margin: 5px 10px 5px 5px;
 

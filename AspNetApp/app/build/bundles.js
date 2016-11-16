@@ -10,7 +10,7 @@ module.exports = {
         "inject": true,
         "minify": true,
         "depCache": true,
-        "rev": false
+        "rev": true
       }
     },
     "dist/aurelia": {
@@ -31,13 +31,16 @@ module.exports = {
         "bootstrap-datepicker/dist/css/bootstrap-datepicker.css!text",
         "jquery",
         "bootstrap-datepicker",
-        "select2"
+        "select2",
+        "moment",
+        "numeral",
+        "toastr"
       ],
       "options": {
         "inject": true,
         "minify": true,
         "depCache": false,
-        "rev": false
+        "rev": true
       }
     }
   }

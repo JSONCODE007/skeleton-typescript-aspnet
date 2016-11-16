@@ -1,34 +1,28 @@
-import {ClaimErrorCodeValueConverter} from './claim-error-code';
-import {ClaimStatusValueConverter} from './claim-status';
-import {ClaimTypeValueConverter} from './claim-type';
 import {DateValueConverter} from './date';
 import {NumberValueConverter} from './number';
 import {autoinject} from 'aurelia-framework';
 
 @autoinject()
 export class MetaValueConverter {
-    constructor(private claimErrorCodeValueConverter: ClaimErrorCodeValueConverter,
-                private claimStatusValueConverter: ClaimStatusValueConverter,
-                private claimTypeValueConverter: ClaimTypeValueConverter,
-                private dateValueConverter: DateValueConverter,
-                private numberValueConverter: NumberValueConverter) {
+    constructor(private date: DateValueConverter,
+                private number: NumberValueConverter) {
     }
 
-    public toView(val, converter, format) {
+    public toView(value, valueConverter, format) {
         /* JUSTIFICATION: http://stackoverflow.com/questions/38898440/aurelia-dynamically-bound-value-converter#comment-65199423 */
         /* tslint:disable:no-string-literal */
-        if (this[converter + 'ValueConverter'] && this[converter + 'ValueConverter'].toView) {
-            return this[converter + 'ValueConverter'].toView(val, format);
+        if (this[valueConverter] && this[valueConverter].toView) {
+            return this[valueConverter].toView(value, format);
         } else {
-            return val;
+            return value;
         }
     }
 
-    public fromView(val, converter, format) {
-        if (this[converter + 'ValueConverter'] && this[converter + 'ValueConverter'].fromView) {
-            return this[converter + 'ValueConverter'].fromView(val, format);
+    public fromView(val, valueConverter, format) {
+        if (this[valueConverter] && this[valueConverter].fromView) {
+            return this[valueConverter].fromView(value, format);
         } else {
-            return val;
+            return value;
         }
     }
 }

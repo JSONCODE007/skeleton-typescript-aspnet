@@ -1,15 +1,12 @@
 @import '../framework/colors';
 
-$border-color: rgba(0, 0, 0, .15);
-$shadow-color: rgba(0, 0, 0, .175);
-$icon-gray: #555;
 
 .dropdown-menu {
     background-clip: padding-box;
-    background-color: $white;
-    border: 1px solid $border-color;
+    background-color: get-color('white');
+    border: 1px solid get-color('lighter-gray');
     border-radius: 4px;
-    box-shadow: 0 6px 12px $shadow-color;
+    box-shadow: 0 6px 12px get-color('lighter-gray');
     float: left;
     font-size: 14px;
     list-style: none;

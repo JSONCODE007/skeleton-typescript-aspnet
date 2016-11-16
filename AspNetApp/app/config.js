@@ -33,6 +33,11 @@ System.config({
     "select2": "github:select2/select2@4.0.3",
     "spin": "github:fgnass/spin.js@2.3.2",
     "text": "github:systemjs/plugin-text@0.0.8",
+    "toastr": "github:CodeSeven/toastr@2.1.3",
+    "github:CodeSeven/toastr@2.1.3": {
+      "css": "github:systemjs/plugin-css@0.1.32",
+      "jquery": "github:components/jquery@3.1.1"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },

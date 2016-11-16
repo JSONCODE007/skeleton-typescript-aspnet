@@ -2,8 +2,8 @@
 
 nav {
     align-items: center;
-    background-color: $pale-green;
-    border-color: $green;
+    background-color: get-color('lightest-green');
+    border-color: get-color('green');
     border-style: solid;
     border-width: 0 0 1px;
     display: flex;
@@ -31,4 +31,8 @@ nav {
     position: absolute;
     right: 10px;
     top: 12px;
+}
+.navigation-items {
+    align-items: center;
+    display: flex;
 }

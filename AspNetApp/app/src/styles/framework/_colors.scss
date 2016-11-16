@@ -2,10 +2,16 @@ $black: #000;
 $gray: #666;
 $white: #fff;
 
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
 $colors: (
-    white: (base: $white),
-    black: (base: $black),
-    gray: (
+    'white': (base: $white),
+    'black': (base: $black),
+    'gray': (
         base: $gray,
         light: tint($gray, 25%),
         lighter: tint($gray, 50%),
@@ -14,18 +20,12 @@ $colors: (
         darker: shade($gray, 50%),
         darkest: shade($gray, 75%)
     )
-)
+);
+@function get-color($color-string) {
+    $pos: str-index($color-string, '-');
+    $shade: if($pos == null, base, str-slice($color-string, 0, $pos - 1));
+    $color: if($pos == null, $color-string, str-slice($color-string, $pos + 1));
 
+    @return map-get(map-get($colors, $color), $shade);
+}
 
-
-// $black: #000;
-// $blue: #1e90ff;
-// $green: #7c9c8f;
-// $dark-gray: #333;
-// $dark-green: #527e71;
-// $gray: #f9f9f9;
-// $light-gray: #adadad;
-// $light-red: #ffbfbf;
-// $light-yellow: #ffffe0;
-// $pale-green: #e8eeed;
-// $white: #fff;
